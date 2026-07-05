@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llmisms"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=2.0,<3",
+  "pyarrow>=18,<24",
+  "matplotlib>=3.9,<4",
+  "transformers>=4.57,<6",
+  "tqdm>=4.66,<5",
+]
+
+[project.scripts]
+llmisms = "llmisms.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
